@@ -8,7 +8,7 @@ import static java.lang.System.getenv;
 
 public class UserDao {
     ConnectionMaker connectionMaker;
-    public UserDao() {
+    public UserDao(ConnectionMaker connectionMaker) {
         this.connectionMaker = new DConnectionMaker();
     }
     //SimpleConnectionMaker connectionMaker = new SimpleConnectionMaker();
@@ -60,7 +60,7 @@ public class UserDao {
         System.out.println(selectedUser.getId());
         System.out.println(selectedUser.getName());
         System.out.println(selectedUser.getPassword());
-        */
+         */
         /*
         UserDao userDao = new NUserDao();
         User user = new User();
@@ -87,6 +87,7 @@ public class UserDao {
         System.out.println(selectedUser.getName());
         System.out.println(selectedUser.getPassword());
          */
+        /*
         UserDao userDao = new UserDao();
         User user = new User();
         user.setId("6");
@@ -97,7 +98,9 @@ public class UserDao {
         User selectedUser = userDao.get("6");
         System.out.println(selectedUser.getId());
         System.out.println(selectedUser.getName());
-        System.out.println(selectedUser.getPassword());
-
+        System.out.println(selectedUser.getPassword();
+         */
+        ConnectionMaker cm = new DConnectionMaker();
+        UserDao userDao = new UserDao(cm);
     }
 }
